@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- *** CHANGE CONTROLLER HERE *** -->
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hms.user_controllers.amenities_request_controller">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="345.0" prefWidth="118.0" style="-fx-background-color: d9d9d9;" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS">
+         <!-- Navigation Buttons (fx:id and onAction needed if handled by parent/this controller) -->
+         <children>
+            <Button fx:id="dashboardButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDashboardbutton" prefHeight="46.0" prefWidth="126.0" style="-fx-background-color: black;" text="Dashboard" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="servicesButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleServicebutton" prefHeight="46.0" prefWidth="118.0" style="-fx-background-color: black;" text="Services Request" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="amenitiesRequestButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAmenitiesbutton" prefHeight="46.0" prefWidth="118.0" style="-fx-background-color: black;" text="Amenities Request" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <top>
+       <!-- Top Bar -->
+      <BorderPane prefHeight="70.0" prefWidth="725.0" style="-fx-background-color: d9d9d9;">
+         <center>
+            <HBox prefHeight="70.0" prefWidth="314.0" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="70.0" prefWidth="174.0">
+                     <children>
+                        <Label fx:id="realtime" layoutX="129.0" layoutY="26.0" text="realtime" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="70.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="username" prefHeight="27.0" prefWidth="175.0" text="Username" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="-2.0" right="-20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="71.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/download.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+   <bottom>
+       <!-- Bottom Bar -->
+      <BorderPane prefHeight="70.0" prefWidth="725.0" style="-fx-background-color: d9d9d9;" BorderPane.alignment="CENTER">
+         <left>
+            <HBox prefHeight="70.0" prefWidth="119.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="70.0" prefWidth="214.0">
+                     <children>
+                        <Button fx:id="logoutButton" layoutX="8.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleLogoutbutton" prefHeight="55.0" prefWidth="108.0" text="Logout" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Log%20out.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </left>
+         <center>
+            <Label text="About Us" BorderPane.alignment="TOP_CENTER">
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+   </bottom>
+   <center>
+      <!-- Center content for Amenities -->
+      <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+         </padding>
+         <children>
+            <!-- Amenities Section -->
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="6.0" text="Amenities" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="80.0" layoutY="15.0" prefWidth="200.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" spacing="30.0">
+               <children>
+                  <!-- *** ADD fx:id and onAction TO BUTTONS *** -->
+                  <Button fx:id="tissueButton" onAction="#handleTissueButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 10;" text="Tissue" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="towelButton" onAction="#handleTowelButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 10;" text="Towel" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="soapButton" onAction="#handleSoapButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 10;" text="Soap" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+
+            <!-- Important Section -->
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="6.0" text="Important" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="80.0" layoutY="15.0" prefWidth="200.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <!-- Add content for the "Important" section here if needed -->
+
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

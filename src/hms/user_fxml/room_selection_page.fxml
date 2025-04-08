@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Remove fixed min/max sizes from BorderPane to allow natural resizing -->
+<!-- Added fx:controller reference -->
+<!-- Adjusted prefHeight/Width to match reference -->
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hms.user_controllers.room_controller">
+   <left>
+      <!-- Left VBox structure and style from reference -->
+      <VBox alignment="TOP_CENTER" prefHeight="345.0" prefWidth="118.0" style="-fx-background-color: d9d9d9;" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS">
+         <children>
+            <!-- Navigation buttons -->
+            <Button fx:id="dashboardButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDashboardbutton" prefHeight="46.0" prefWidth="126.0" style="-fx-background-color: black;" text="Dashboard" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="servicesButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleServicebutton" prefHeight="46.0" prefWidth="118.0" style="-fx-background-color: black;" text="Services Request" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="amenitiesRequestButton" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAmenitiesbutton" prefHeight="46.0" prefWidth="118.0" style="-fx-background-color: black;" text="Amenities Request" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <!-- Top BorderPane structure and style from reference -->
+      <BorderPane prefHeight="70.0" prefWidth="725.0" style="-fx-background-color: d9d9d9;">
+         <center>
+             <!-- Center HBox from reference -->
+            <HBox prefHeight="70.0" prefWidth="314.0" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+             <!-- Left HBox structure from reference -->
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="70.0" prefWidth="174.0">
+                     <children>
+                         <!-- Adjusted layout for realtime label based on reference -->
+                        <Label fx:id="realtime" layoutX="129.0" layoutY="26.0" text="realtime" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </left>
+         <right>
+             <!-- Right HBox structure, alignment, and margins from reference -->
+            <HBox alignment="BOTTOM_LEFT" prefHeight="70.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+               <children>
+                   <!-- Changed fx:id to username to match potential controller field -->
+                  <Label fx:id="username" prefHeight="27.0" prefWidth="175.0" text="Username" textAlignment="CENTER"> <!-- Changed alignment to CENTER like reference -->
+                     <HBox.margin>
+                         <!-- Margins from reference -->
+                        <Insets bottom="5.0" left="-2.0" right="-20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <!-- Adjusted ImageView size and margin like reference -->
+                  <ImageView fitHeight="71.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/download.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+   <bottom>
+       <!-- Bottom BorderPane structure and style from reference -->
+      <BorderPane prefHeight="70.0" prefWidth="725.0" style="-fx-background-color: d9d9d9;" BorderPane.alignment="CENTER">
+         <left>
+             <!-- Left HBox structure from reference -->
+            <HBox prefHeight="70.0" prefWidth="119.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="70.0" prefWidth="214.0">
+                     <children>
+                         <!-- Logout button structure and positioning from reference -->
+                        <Button fx:id="logoutButton" layoutX="8.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleLogoutbutton" prefHeight="55.0" prefWidth="108.0" text="Logout" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Log%20out.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </left>
+         <center>
+             <!-- Center Label structure, alignment, and margin from reference -->
+            <Label text="About Us" BorderPane.alignment="TOP_CENTER">
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+   </bottom>
+   <center>
+      <!-- Center content remains the GridPane for room types -->
+      <GridPane alignment="CENTER" hgap="30.0" style="-fx-background-color: white;" vgap="30.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" percentHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" percentHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <!-- Single Room Button -->
+            <Button fx:id="handleSingleRoombutton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSingleRoombutton" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 10;" text="Single Room" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <!-- Double Room Button -->
+            <Button fx:id="handleDoubleRoombutton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDoubleRoombutton" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 10;" text="Double Room" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <!-- Triple Room Button -->
+            <Button fx:id="handleTripleRoomButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleTripleRoomButton" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 10;" text="Triple Room" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <!-- Quadruple Room Button -->
+            <Button fx:id="handleQuadrupleRoombutton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleQuadrupleRoombutton" style="-fx-background-color: #333333; -fx-text-fill: white; -fx-background-radius: 10;" text="Quadruple Room" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+      </GridPane>
+   </center>
+</BorderPane>

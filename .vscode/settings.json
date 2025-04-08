@@ -1,0 +1,33 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\Asus\\AppData\\Local\\SceneBuilder\\javafx-sdk-23.0.2\\lib\\javafx.base.jar",
+    "c:\\Users\\Asus\\AppData\\Local\\SceneBuilder\\javafx-sdk-23.0.2\\lib\\javafx.controls.jar",
+    "c:\\Users\\Asus\\AppData\\Local\\SceneBuilder\\javafx-sdk-23.0.2\\lib\\javafx.fxml.jar",
+    "c:\\Users\\Asus\\AppData\\Local\\SceneBuilder\\javafx-sdk-23.0.2\\lib\\javafx.graphics.jar",
+    "c:\\Users\\Asus\\AppData\\Local\\SceneBuilder\\javafx-sdk-23.0.2\\lib\\javafx.media.jar",
+    "c:\\Users\\Asus\\AppData\\Local\\SceneBuilder\\javafx-sdk-23.0.2\\lib\\javafx.swing.jar",
+    "c:\\Users\\Asus\\AppData\\Local\\SceneBuilder\\javafx-sdk-23.0.2\\lib\\javafx.web.jar",
+    "c:\\Users\\Asus\\AppData\\Local\\SceneBuilder\\javafx-sdk-23.0.2\\lib\\javafx-swt.jar",
+    "c:\\Users\\Asus\\AppData\\Local\\SceneBuilder\\mysql-connector-j-9.2.0\\mysql-connector-j-9.2.0.jar"
+  ],
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "MySQL HMS",
+      "database": "userdb",
+      "username": "root",
+      "connectionTimeout": 60,
+      "askForPassword": true
+    }
+  ]
+}

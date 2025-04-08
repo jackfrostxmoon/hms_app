@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Using BorderPane as the root -->
+<BorderPane prefHeight="485.0" prefWidth="725.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hms.user_controllers.registration_controller">
+   <left>
+      <!-- StackPane to center the image in the left area -->
+      <StackPane prefWidth="350.0" style="-fx-background-color: #f0f0f0;" BorderPane.alignment="CENTER">
+         <children>
+            <!-- Image will scale while preserving ratio -->
+            <ImageView pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <image>
+                  <!-- Ensure path is correct -->
+                  <Image url="@../assets/download.png" />
+               </image>
+                <!-- Adjust fitWidth as needed for desired initial size -->
+               <fitWidth>300</fitWidth>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </StackPane>
+   </left>
+   <center>
+      <!-- VBox for the registration form elements -->
+      <VBox alignment="CENTER" prefHeight="485.0" prefWidth="375.0" spacing="5.0" BorderPane.alignment="CENTER"> <!-- Reduced spacing slightly -->
+         <padding>
+            <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" /> <!-- Adjusted padding -->
+         </padding>
+         <children>
+            <Label text="Registration">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" /> <!-- Adjusted margin -->
+               </VBox.margin>
+            </Label>
+
+            <!-- Name Field -->
+            <Label text="Username" VBox.vgrow="NEVER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="-5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="nameField" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Enter your username">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+
+            <!-- Email Field -->
+            <Label text="Email" VBox.vgrow="NEVER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="-5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="emailField" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Enter your email">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+
+            <!-- Password Field -->
+            <Label text="Password" VBox.vgrow="NEVER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+                <VBox.margin>
+                  <Insets bottom="-5.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="passwordField" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Enter password (min 8 chars)">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </PasswordField>
+
+             <!-- Confirm Password Field -->
+            <Label text="Confirm Password" VBox.vgrow="NEVER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+                <VBox.margin>
+                  <Insets bottom="-5.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="confirmPasswordField" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Confirm your password">
+               <VBox.margin>
+                  <Insets bottom="15.0" /> <!-- Increased margin before checkbox -->
+               </VBox.margin>
+            </PasswordField>
+
+            <!-- Terms Checkbox -->
+            <CheckBox fx:id="termsCheckbox" mnemonicParsing="false" text="Accept the terms and conditions">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </CheckBox>
+
+            <!-- Register Button -->
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleRegistration" prefHeight="45.0" style="-fx-background-color: black; -fx-background-radius: 5;" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+
+             <!-- Login Prompt and Button -->
+            <Label text="Already have an account?">
+                <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLoginbutton" prefHeight="45.0" style="-fx-background-color: #555555; -fx-background-radius: 5;" text="Login" textFill="WHITE">
+                <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+
+            <!-- Message Label -->
+            <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER" wrapText="true">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

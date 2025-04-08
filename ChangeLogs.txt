@@ -1,0 +1,42 @@
+Changes:
+ - Change setting up multiple database in each file into single method
+ - Change the new scene statement into a method
+ - Change the fxID's to easily readable
+ - Change login scene from username textfield into user email textfield
+ - Change the names of javafx files into lowercase
+ - Change the scene after user successful register from dashboard to user login
+
+Updates:
+ - User names now is display in the navigation in different scene
+ - Hard coded admin detail is now inside the database
+ - Password is now required more than 8 characters
+ - Everytime user register it will default the roles as user
+ - When user type staff is selected it will go to user login scene
+
+Fixes:
+ - Fix the inconsistent alignment and sizes of the scenes
+ - Fix the controllers files into one folders
+ - Fix the missing image/icon that does not load
+ - Fix the alert into method in some files
+
+addons:
+ - Add comment in appropriate coding statement
+ - Add try and catch for debugging in every action to display error message properly
+ - Add message in the login scene in if the information is empty or invalid
+ - Add message in the register scene if the information is duplicated, empty or invalid
+ - Add colors of the button of each appropriate scenes
+ - Add alert type of pop-up if the login is successful
+ - Add alert type of pop-up if the register is successful
+ - Add table for room types
+ - Add table for services request
+ - Add table for amenities request
+ - Add working room_controller, service_request_controller, amenities_controller
+
+To do list:
+ - Working room_controller, service_request_controller, amenities_controller (Done)
+ - Appropriate FxID's, on Action in fxml files (room, services, amenities) (Done)
+ - Show the statistic in staff
+ - Show the list of task of user request in staff dashboard
+ - Add working controllers for staff
+ - Change the service_request_controller save data into the database using simpler way for each button instead of using lambda
+ - ...
